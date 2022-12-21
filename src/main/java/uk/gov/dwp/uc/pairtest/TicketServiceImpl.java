@@ -34,7 +34,7 @@ public class TicketServiceImpl implements TicketService {
         int totalAmount =0;
         int totalNumberOfTickets =0;
         boolean adultTicketFlag = false;
-        for (TicketTypeRequest ttr : Arrays.asList(ticketTypeRequests)) {
+        for (TicketTypeRequest ttr : ticketTypeRequests) {
             if (!ttr.getTicketType().equals(TicketTypeRequest.Type.INFANT)) {
                 if (ttr.getTicketType().equals(TicketTypeRequest.Type.CHILD)) {
                     totalAmount = totalAmount + TicketBookingConstants.CHILD_TICKET_PRICE * ttr.getNoOfTickets();
